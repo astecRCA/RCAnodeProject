@@ -2,7 +2,10 @@
     "name": "RCAnodeProject",
     "description": "RCA project in NodeRed.",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-mqtt-connection-check": "0.1.2",
+        "node-red-dashboard": "2.30.0"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",

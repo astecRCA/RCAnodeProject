@@ -196,8 +196,8 @@
         "username": "",
         "password": "",
         "name": "|Gui",
-        "x": 170,
-        "y": 220,
+        "x": 230,
+        "y": 240,
         "wires": [
             [
                 "33784c200cb7cac3"
