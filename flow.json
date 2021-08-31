@@ -1,1 +1,250 @@
-[]
+[
+    {
+        "id": "54658243e3adb7be",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "48beb6c72d592f43",
+        "type": "ui_tab",
+        "name": "Button",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4c0ed3207177d94b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "30f721d4d81d027c",
+        "type": "ui_group",
+        "name": "Buttons",
+        "tab": "48beb6c72d592f43",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "67cf0fe5e32b254f",
+        "type": "ui_button",
+        "z": "54658243e3adb7be",
+        "name": "",
+        "group": "30f721d4d81d027c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "black",
+        "bgcolor": "white",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "411076fd1e4f9ed0"
+            ]
+        ]
+    },
+    {
+        "id": "7be6cf9441879544",
+        "type": "debug",
+        "z": "54658243e3adb7be",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "411076fd1e4f9ed0",
+        "type": "ui_text_input",
+        "z": "54658243e3adb7be",
+        "name": "",
+        "label": "Digite algo",
+        "tooltip": "",
+        "group": "30f721d4d81d027c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "7be6cf9441879544"
+            ]
+        ]
+    },
+    {
+        "id": "a85030c8de945896",
+        "type": "mqtt-check",
+        "z": "54658243e3adb7be",
+        "host": "192.168.0.182",
+        "port": "1883",
+        "username": "",
+        "password": "",
+        "name": "|Gui",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "33784c200cb7cac3"
+            ]
+        ]
+    },
+    {
+        "id": "87ecf6f8fb4b4a75",
+        "type": "ui_button",
+        "z": "54658243e3adb7be",
+        "name": "",
+        "group": "30f721d4d81d027c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Mqqt connect",
+        "tooltip": "",
+        "color": "black",
+        "bgcolor": "white",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "a85030c8de945896"
+            ]
+        ]
+    },
+    {
+        "id": "33784c200cb7cac3",
+        "type": "ui_text",
+        "z": "54658243e3adb7be",
+        "group": "30f721d4d81d027c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "MQTT connect",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 430,
+        "y": 300,
+        "wires": []
+    }
+]
