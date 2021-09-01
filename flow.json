@@ -205,33 +205,6 @@
         ]
     },
     {
-        "id": "87ecf6f8fb4b4a75",
-        "type": "ui_button",
-        "z": "54658243e3adb7be",
-        "name": "",
-        "group": "30f721d4d81d027c",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Mqqt connect",
-        "tooltip": "",
-        "color": "black",
-        "bgcolor": "white",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "str",
-        "x": 120,
-        "y": 320,
-        "wires": [
-            [
-                "a85030c8de945896"
-            ]
-        ]
-    },
-    {
         "id": "33784c200cb7cac3",
         "type": "ui_text",
         "z": "54658243e3adb7be",
@@ -246,5 +219,34 @@
         "x": 430,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "e49cfd51d4f6971b",
+        "type": "inject",
+        "z": "54658243e3adb7be",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 240,
+        "wires": [
+            [
+                "a85030c8de945896"
+            ]
+        ]
     }
 ]
